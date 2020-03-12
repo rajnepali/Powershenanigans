@@ -49,8 +49,8 @@ Write-Output("[+] Normalizing paths....")
 $final_vuln_services = @()
 $current_dir = Get-Location | select -ExpandProperty Path
 #Lets check the user 
-$principal = New-Object Security.Principal.WindowsPrincipal([System.Security.Principal.WindowsIdentity]::GetCurrent()) 
-if($principal.IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator))
+$context = New-Object Security.Principal.WindowsPrincipal([System.Security.Principal.WindowsIdentity]::GetCurrent()) 
+if($context.IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator))
 {
     Write-Host("[+] Awesome! you have admin rights :) ")
 	$user = "BUILTIN\Administrators"
