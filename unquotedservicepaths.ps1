@@ -7,7 +7,7 @@
 
     This script simply looks for unquoted service paths and checks for write permission to the paths.
 
-.EXAMPLES
+.EXAMPLE
     PS C:\Users\rajnepali\Desktop> .\unquotedservicepaths.ps1
 #>
 
